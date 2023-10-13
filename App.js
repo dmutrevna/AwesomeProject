@@ -1,21 +1,29 @@
-import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
-import RegistrationScreen from './Screens/RegistrationScreen/RegistrationScreen'
+import React from 'react'
+import 'react-native-gesture-handler'
+import { NavigationContainer } from '@react-navigation/native'
 
-export default function App() {
+import { StatusBar } from 'expo-status-bar'
+import { View } from 'react-native'
+
+import { useFonts } from 'expo-font'
+import { gStyle } from './styles/styles'
+import Navigation from './Screens/Navigation/Navigation'
+
+const App = () => {
+  const [fontsLoaded] = useFonts({
+    'r-medium': require('./assets/fonts/Roboto-Medium.ttf'), //500
+    'r-regular': require('./assets/fonts/Roboto-Regular.ttf'), //400
+  })
+
+  if (!fontsLoaded) {
+    return null
+  }
+
   return (
-    <View style={styles.container}>
-      <RegistrationScreen />
+    <NavigationContainer>
+      <Navigation />
       <StatusBar style="auto" />
-    </View>
+    </NavigationContainer>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
+export default App
