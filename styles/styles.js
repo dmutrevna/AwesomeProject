@@ -13,12 +13,13 @@ export const gStyle = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
     justifyContent: 'flex-end',
+    // position: 'relative',
   },
 
   photoBlok: {
     width: 120,
     height: 120,
-    backgroundColor: '#F6F6F6',
+    backgroundColor: 'rgba(246, 246, 246, 1)',
     position: 'absolute',
     top: -60,
     left: '36%',
@@ -59,6 +60,7 @@ export const gStyle = StyleSheet.create({
   },
   inputFocus: {
     borderColor: 'rgba(255, 108, 0, 1)',
+    backgroundColor: 'rgba(255, 255, 255, 1)',
   },
 
   lastInput: {
