@@ -8,13 +8,15 @@ import RegistrationForm from '../RegistrationForm/RegistrationForm'
 
 const RegistrationScreen = () => {
   return (
-    <View>
-      <ImageBackground
-        source={require('../../assets/img/bgImage.png')}
-        style={gStyle.backgroundImage}
-      >
-        <RegistrationForm />
-      </ImageBackground>
+    <View style={gStyle.container}>
+      <View>
+        <ImageBackground
+          source={require('../../assets/img/bgImage.png')}
+          style={gStyle.backgroundImage}
+        >
+          <RegistrationForm />
+        </ImageBackground>
+      </View>
     </View>
   )
 }

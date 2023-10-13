@@ -2,11 +2,8 @@ import { StyleSheet } from 'react-native'
 
 export const gStyle = StyleSheet.create({
   container: {
-    // flex: 1,
-    // backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-    // marginTop: 263,
     fontFamily: 'r-regular',
     paddingLeft: 16,
     paddingRight: 16,
@@ -90,12 +87,18 @@ export const gStyle = StyleSheet.create({
     textAlign: 'center',
   },
 
-  textLogin: {
+  containerText: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     marginTop: 16,
+    marginBottom: 72,
+  },
+
+  textLogin: {
     fontFamily: 'r-regular',
     fontSize: 16,
-    textAlign: 'center',
-    marginBottom: 78,
     color: 'rgba(27, 67, 113, 1)',
   },
 
@@ -107,5 +110,24 @@ export const gStyle = StyleSheet.create({
   eyeIcon: {
     marginLeft: -40,
     marginBottom: 2,
+  },
+
+  loginSection: {
+    paddingTop: 16,
+    borderTopLeftRadius: 35,
+    borderTopRightRadius: 35,
+    width: 375,
+    height: 489,
+    backgroundColor: 'rgba(255, 255, 255, 1)',
+    paddingLeft: 16,
+  },
+
+  containerTextLogin: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 16,
+    marginBottom: 145,
   },
 })

@@ -21,12 +21,9 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <View style={gStyle.container}>
-        <Navigation />
-        <StatusBar style="auto" />
-      </View>
+      <Navigation />
+      <StatusBar style="auto" />
     </NavigationContainer>
   )
 }
-
 export default App

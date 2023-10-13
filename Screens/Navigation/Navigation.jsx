@@ -10,8 +10,16 @@ const MainStack = createStackNavigator()
 const Navigation = () => {
   return (
     <MainStack.Navigator initialRouteName="Registration">
-      <MainStack.Screen name="Registration" component={RegistrationScreen} />
-      <MainStack.Screen name="Login" component={LoginScreen} />
+      <MainStack.Screen
+        options={{ headerShown: false }}
+        name="Registration"
+        component={RegistrationScreen}
+      />
+      <MainStack.Screen
+        options={{ headerShown: false }}
+        name="Login"
+        component={LoginScreen}
+      />
     </MainStack.Navigator>
   )
 }

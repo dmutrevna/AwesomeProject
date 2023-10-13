@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
+import { gStyle } from '../../styles/styles'
 import {
   KeyboardAvoidingView,
+  View,
   Text,
   TextInput,
   TouchableOpacity,
-  View,
 } from 'react-native'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
 
-import { gStyle } from '../../styles/styles'
+import { MaterialCommunityIcons } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native'
 
-const RegistrationForm = () => {
+const LoginForm = () => {
   const navigation = useNavigation()
   const [showPassword, setShowPassword] = useState(false)
   const [password, setPassword] = useState('')
@@ -20,19 +20,6 @@ const RegistrationForm = () => {
     email: false,
     password: false,
   })
-  const [formData, setFormData] = useState({
-    login: '',
-    email: '',
-    password: '',
-  })
-
-  const handleInputChange = (field, value) => {
-    setFormData({ ...formData, [field]: value })
-  }
-
-  const handleSubmit = () => {
-    console.log(formData)
-  }
 
   const toggleShowPassword = () => {
     setShowPassword(!showPassword)
@@ -42,24 +29,9 @@ const RegistrationForm = () => {
     <KeyboardAvoidingView
       behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
     >
-      <View style={gStyle.registerSection}>
-        <View style={gStyle.photoBlok}>
-          <MaterialCommunityIcons
-            name={'plus-circle-outline'}
-            style={gStyle.buttonX}
-            size={25}
-            color="#FF6C00"
-            onPress={toggleShowPassword}
-          />
-        </View>
-        <Text style={gStyle.title}>Реєстрація</Text>
-        <TextInput
-          style={[gStyle.input, inputStates.login && gStyle.inputFocus]}
-          placeholder="Логін"
-          placeholderTextColor="rgba(189, 189, 189, 1)"
-          onFocus={() => setInputStates({ ...inputStates, login: true })}
-          onBlur={() => setInputStates({ ...inputStates, login: false })}
-        />
+      <View style={gStyle.loginSection}>
+        {/* <Button title="Go back" onPress={() => navigation.goBack()} /> */}
+        <Text style={gStyle.title}>Увійти</Text>
         <TextInput
           style={[gStyle.input, inputStates.email && gStyle.inputFocus]}
           placeholder="Адреса електронної пошти"
@@ -91,15 +63,15 @@ const RegistrationForm = () => {
           />
         </View>
         <TouchableOpacity style={gStyle.buttonRegister} onPress={() => {}}>
-          <Text style={gStyle.textButton}>Зареєструватися</Text>
+          <Text style={gStyle.textButton}>Увійти</Text>
         </TouchableOpacity>
-        <View style={gStyle.containerText}>
-          <Text style={gStyle.textLogin}>Вже є акаунт? </Text>
+        <View style={gStyle.containerTextLogin}>
+          <Text style={gStyle.textLogin}>Немає акаунту? </Text>
           <Text
-            style={gStyle.textLogin}
-            onPress={() => navigation.navigate('Login')}
+            style={[gStyle.textLogin, { textDecorationLine: 'underline' }]}
+            onPress={() => navigation.navigate('Registration')}
           >
-            Увійти
+            Зареєструватися
           </Text>
         </View>
       </View>
@@ -107,4 +79,4 @@ const RegistrationForm = () => {
   )
 }
 
-export default RegistrationForm
+export default LoginForm
