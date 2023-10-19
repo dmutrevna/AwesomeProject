@@ -34,6 +34,11 @@ const RegistrationForm = () => {
 
   const handleSubmit = () => {
     console.log(formData)
+    setFormData({
+      login: '',
+      email: '',
+      password: '',
+    })
   }
 
   const toggleShowPassword = () => {
