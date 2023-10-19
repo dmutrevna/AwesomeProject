@@ -13,6 +13,7 @@ export const gStyle = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
     justifyContent: 'flex-end',
+    // width: '100%',
     // position: 'relative',
   },
 
@@ -33,12 +34,13 @@ export const gStyle = StyleSheet.create({
 
   registerSection: {
     paddingTop: 92,
-    borderTopLeftRadius: 25,
-    borderTopRightRadius: 25,
-    width: 375,
+    borderTopLeftRadius: 35,
+    borderTopRightRadius: 35,
+    width: 393,
     height: 549,
     backgroundColor: 'rgba(255, 255, 255, 1)',
-    paddingLeft: 16,
+    paddingLeft: 20,
+    paddingRight: 20,
   },
 
   title: {
@@ -49,7 +51,7 @@ export const gStyle = StyleSheet.create({
   },
 
   input: {
-    width: 343,
+    width: 353,
     height: 50,
     backgroundColor: 'rgba(246, 246, 246, 1)',
     borderRadius: 5,
@@ -72,7 +74,7 @@ export const gStyle = StyleSheet.create({
   },
 
   buttonRegister: {
-    width: 341,
+    width: 353,
     height: 51,
     backgroundColor: 'rgba(255, 108, 0, 1)',
     justifyContent: 'center',
@@ -118,10 +120,11 @@ export const gStyle = StyleSheet.create({
     paddingTop: 16,
     borderTopLeftRadius: 35,
     borderTopRightRadius: 35,
-    width: 375,
+    width: 393,
     height: 489,
     backgroundColor: 'rgba(255, 255, 255, 1)',
-    paddingLeft: 16,
+    paddingLeft: 20,
+    paddingRight: 20,
   },
 
   containerTextLogin: {
@@ -131,5 +134,25 @@ export const gStyle = StyleSheet.create({
     alignItems: 'center',
     marginTop: 16,
     marginBottom: 145,
+  },
+
+  sectionPosts: {
+    flexDirection: 'row',
+    marginTop: 32,
+    marginLeft: 16,
+    // backgroundColor: 'rgba(255, 255, 255, 1)',
+  },
+  userPostsData: {
+    marginTop: 16,
+    marginBottom: 16,
+    marginLeft: 8,
+  },
+  userPostsName: {
+    fontFamily: 'r-medium',
+    fontSize: 13,
+  },
+  userPostsEmail: {
+    fontFamily: 'r-regular',
+    fontSize: 11,
   },
 })

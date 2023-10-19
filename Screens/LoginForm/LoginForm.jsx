@@ -33,6 +33,10 @@ const LoginForm = () => {
 
   const handleSubmit = () => {
     console.log(formData)
+    setFormData({
+      email: '',
+      password: '',
+    })
   }
 
   const toggleShowPassword = () => {
@@ -84,7 +88,10 @@ const LoginForm = () => {
           </View>
           <TouchableOpacity
             style={gStyle.buttonRegister}
-            onPress={handleSubmit}
+            onPress={() => {
+              handleSubmit()
+              navigation.navigate('PostsScreen')
+            }}
           >
             <Text style={gStyle.textButton}>Увійти</Text>
           </TouchableOpacity>
