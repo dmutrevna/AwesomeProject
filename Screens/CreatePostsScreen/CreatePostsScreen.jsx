@@ -8,5 +8,5 @@ const CreatePostsScreen = () => {
     </View>
   )
 }
-// AIzaSyAqlFIxhSLqgAFdg4mZCevO8unUpGBb-p4 // key google
+
 export default CreatePostsScreen

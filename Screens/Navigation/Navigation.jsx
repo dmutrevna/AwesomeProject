@@ -28,13 +28,8 @@ const BottomTabNavigator = () => {
           paddingBottom: 34,
           borderTopWidth: 1,
           borderTopColor: 'rgba(0, 0, 0, 0.3)',
-          paddingHorizontal: 31,
+          paddingHorizontal: 55,
           // backgroundColor: 'rgba(255, 255, 255, 1)',
-          tabBarItemStyle: {
-            width: 50,
-            height: '100%',
-            marginRight: 31,
-          },
         },
       }}
     >
