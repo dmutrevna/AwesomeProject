@@ -1,15 +1,13 @@
 import React from 'react'
 import 'react-native-gesture-handler'
 import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { MaterialCommunityIcons, Feather } from '@expo/vector-icons'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 import RegistrationScreen from '../RegistrationScreen/RegistrationScreen'
 import LoginScreen from '../LoginScreen/LoginScreen'
 import PostsScreen from '../PostsScreen/PostsScreen'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
-import { Feather } from '@expo/vector-icons'
-import { TouchableOpacity } from 'react-native-gesture-handler'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-
 import CreatePostsScreen from './../CreatePostsScreen/CreatePostsScreen'
 import ProfileScreen from './../ProfileScreen/ProfileScreen'
 
@@ -29,7 +27,6 @@ const BottomTabNavigator = () => {
           borderTopWidth: 1,
           borderTopColor: 'rgba(0, 0, 0, 0.3)',
           paddingHorizontal: 55,
-          // backgroundColor: 'rgba(255, 255, 255, 1)',
         },
       }}
     >
@@ -45,6 +42,7 @@ const BottomTabNavigator = () => {
       />
       <BottomTab.Screen
         options={{
+          headerTitle: 'Публікації',
           headerShown: false,
           tabBarLabel: '',
           tabBarShowLabel: false,
@@ -111,7 +109,6 @@ const Navigation = () => {
           headerStyle: {
             borderBottomWidth: 1,
             borderBottomColor: 'rgba(0, 0, 0, 0.3)',
-            // backgroundColor: 'rgba(255, 255, 255, 1)',
           },
         }}
         name="PostsScreen"

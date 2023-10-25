@@ -107,7 +107,10 @@ const RegistrationForm = () => {
           </View>
           <TouchableOpacity
             style={gStyle.buttonRegister}
-            onPress={handleSubmit}
+            onPress={() => {
+              handleSubmit()
+              navigation.navigate('PostsScreen')
+            }}
           >
             <Text style={gStyle.textButton}>Зареєструватися</Text>
           </TouchableOpacity>
